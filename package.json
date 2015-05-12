@@ -1,0 +1,27 @@
+{
+  "name": "filebutton",
+  "version": "1.0.0",
+  "description": "A component to enable DOM element as file upload button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benpptung/filebutton.git"
+  },
+  "keywords": [
+    "css",
+    "input",
+    "file-input"
+  ],
+  "author": "Ben P.P. Tung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benpptung/filebutton/issues"
+  },
+  "homepage": "https://github.com/benpptung/filebutton#readme",
+  "dependencies": {
+    "component-emitter": "^1.2.0"
+  }
+}
