@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>filebutton test</title>
+    <link href="/test.min.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #79dda5;
+            padding: 50px;
+        }
+
+        #mocha .progress {
+            height: auto !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border-radius: 0;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p>Click Upload to test</p>
+        <a id="upload" class="btn btn-lg btn-primary">Upload</a>
+        <div id="mocha"></div>
+    </div>
+
+<script src="test.min.js"></script>
+<script src="mocha.min.js"></script>
+<script>
+    !(function() {
+        'use strict';
+
+        var filebutton = require('filebutton');
+        var expect = require('expect.js');
+        var el = document.getElementById('upload');
+        var mochaReporter = document.getElementById('mocha');
+        var fileinput;
+
+        var btn = filebutton
+          .create()
+          .on('fileinput', function(_fileinput) {
+
+            fileinput = _fileinput;
+            mocha.run();
+          })
+          .mount(el);
+
+
+        mocha.setup('bdd');
+
+        describe('filebutton', function() {
+
+            describe('click on the button', function() {
+
+                it('should emit fileinput event with fileinput HtmlInputElement', function() {
+                    expect(fileinput.type).to.be('file');
+                });
+            });
+
+            describe('#disable()', function() {
+                it('should disble the filebutton', function() {
+                    btn.disable();
+                    expect(btn._fileinput.style.display).to.be('none');
+                    expect(btn._enabled).not.to.be.ok();
+                })
+            });
+
+            describe('#enable()', function() {
+                it('should enable the filebutton', function() {
+                    btn.enable();
+                    expect(btn._fileinput.style.display).to.be('');
+                    expect(btn._enabled).to.be.ok();
+                });
+            });
+
+            describe('#destroy()', function() {
+                it('should destroy filebutton with destroyed event', function(done) {
+                    btn.on('destroyed', function() {
+                        done();
+                    });
+                    btn.destroy();
+                    expect(btn._onFileChange).to.be(null);
+                    expect(btn._fileinput.parent).to.be(null);
+                });
+            });
+        });
+
+        mocha.checkLeaks();
+    })();
+</script>
+</body>
+</html>
