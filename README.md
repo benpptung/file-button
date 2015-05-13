@@ -61,9 +61,21 @@ filebutton
 
 > $ npm test
 
+# Basic
+
+```
+var filebutton = require('file-button');
+
+filebutton
+  .create() // create the instance
+  .on('fileinput', listener) // listen to the event `fileinput`
+  .mount(el); // mount the view on the button
+
+```
+
 # API
 
-### filebutton.create([options])
+### FileButton.create([options])
 
 A `file-button` can be initiated by invoking the `.create()` method. For example.
 
@@ -89,15 +101,23 @@ Emitted each time the file input value is changed. The `fileinput` element will 
 
 Emitted after the instance is destroyed.
 
-### filebutton#enable()
+### filebutton.mount({HtmlElement})
+
+Mount the view on an element. For example, a bootstrap button 
+
+```
+<a class="btn btn-lg btn-primary">Upload</a>
+```
+
+### filebutton.enable()
 
 Enable the file input button.
 
-### filebutton#disable()
+### filebutton.disable()
 
 Disable the file input button.
 
-### filebutton#destroy()
+### filebutton.destroy()
 
 Destroy the file input button. A `destroyed` event will be emitted.
 
