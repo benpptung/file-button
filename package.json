@@ -1,6 +1,6 @@
 {
   "name": "file-button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Turn a DOM element into a file input",
   "main": "index.js",
   "scripts": {
