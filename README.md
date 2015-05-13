@@ -2,7 +2,7 @@ Example
 =======
 
 
-######javascript
+#####javascript
 ```
 var filebutton = require('file-button');
 var request = require('superagent');
@@ -41,7 +41,7 @@ filebutton
 
 ```
 
-######html
+#####html
 
 ```
 <a id="button" >Upload</a>
@@ -56,3 +56,68 @@ filebutton
 ```  
 <button id="button">Upload</button> // IE8 won't work
 ```
+
+#Test
+
+> $ npm test
+
+# API
+
+### filebutton.create([options])
+
+A `file-button` can be initiated by invoking the `.create()` method. For example.
+
+```
+var filebutton = require('file-button');
+
+filebutton.create();
+```
+
+The `file-button` instance is also an Event-Emitter using [component-emitter](https://github.com/component/emitter).
+
+options : {Object}
+
+- multiple: {Boolean}, default to true
+- accept: {String}, default to null
+- fieldName: {String}, default to 'ajaxfile'
+
+### Event: 'fileinput'
+
+Emitted each time the file input value is changed. The `fileinput` element will be removed from the DOM Tree and emitted to the listener.
+
+### Event: 'destroyed'
+
+Emitted after the instance is destroyed.
+
+### filebutton#enable()
+
+Enable the file input button.
+
+### filebutton#disable()
+
+Disable the file input button.
+
+### filebutton#destroy()
+
+Destroy the file input button. A `destroyed` event will be emitted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

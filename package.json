@@ -1,7 +1,7 @@
 {
   "name": "file-button",
-  "version": "1.0.0",
-  "description": "A component to enable DOM element as file upload button",
+  "version": "1.0.1",
+  "description": "Turn a DOM element into a file input",
   "main": "index.js",
   "scripts": {
     "appstack": "appstack",
@@ -9,26 +9,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benpptung/filebutton.git"
+    "url": "https://github.com/benpptung/file-button"
   },
   "keywords": [
-    "css",
     "input",
     "file-input",
     "button",
-    "file"
+    "file",
+    "upload"
   ],
   "author": "Ben P.P. Tung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benpptung/filebutton/issues"
+    "url": "https://github.com/benpptung/file-button/issues"
   },
-  "homepage": "https://github.com/benpptung/filebutton#readme",
+  "homepage": "https://github.com/benpptung/file-button#readme",
   "dependencies": {
     "component-emitter": "^1.2.0"
   },
   "devDependencies": {
-    "appstackr": "file:../../command-lib/appstackr",
+    "appstackr": "^0.3.5",
     "bootstrap-sass": "^3.3.4",
     "expect.js": "^0.3.1",
     "mocha": "^2.2.4"
