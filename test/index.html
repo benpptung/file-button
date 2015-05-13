@@ -23,7 +23,8 @@
 
     <div class="container">
         <p>Click Upload to test</p>
-        <a id="upload" class="btn btn-lg btn-primary">Upload</a>
+            <a id="upload" class="btn btn-lg btn-primary">Upload</a>&nbsp;
+            <span id="file-value"></span>
         <div id="mocha"></div>
     </div>
 
@@ -36,6 +37,7 @@
         var filebutton = require('file-button');
         var expect = require('expect.js');
         var el = document.getElementById('upload');
+        var fileValue = document.getElementById('file-value');
         var fileinput;
 
         var btn = filebutton
@@ -43,6 +45,7 @@
           .on('fileinput', function(_fileinput) {
 
             fileinput = _fileinput;
+            fileValue.innerHTML = fileinput.value;
             mocha.run();
           })
           .mount(el);

@@ -2,7 +2,7 @@ Example
 =======
 
 
-#####javascript
+##### javascript
 ```
 var filebutton = require('file-button');
 var request = require('superagent');
@@ -41,7 +41,7 @@ filebutton
 
 ```
 
-#####html
+##### html
 
 ```
 <a id="button" >Upload</a>
@@ -57,9 +57,11 @@ filebutton
 <button id="button">Upload</button> // IE8 won't work
 ```
 
-#Test
+# Test
 
-> $ npm test
+```
+$ npm test
+```
 
 # Basic
 
