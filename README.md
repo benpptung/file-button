@@ -2,9 +2,9 @@ Example
 =======
 
 
-javascript
+######javascript
 ```
-var filebutton = require('filebutton');
+var filebutton = require('file-button');
 var request = require('superagent');
 
 filebutton
@@ -41,15 +41,18 @@ filebutton
 
 ```
 
-html
+######html
+
 ```
-  <a id="button" >Upload</a>
+<a id="button" >Upload</a>
+```
   
   or
-  
-  <div id = "button">Upload</div>
+```  
+<div id = "button">Upload</div>
+```
   
   or
-  
-  <button id="button">Upload</button> // IE8 <button> won't work
+```  
+<button id="button">Upload</button> // IE8 won't work
 ```
