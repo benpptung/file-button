@@ -7,7 +7,7 @@ module.exports = [
       'expect.js'
     ],
     browserify: {
-      exposes: 'legacy.js:filebutton, expect.js'
+      exposes: 'legacy.js:file-button, expect.js'
     }
   },
   {

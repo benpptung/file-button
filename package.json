@@ -1,5 +1,5 @@
 {
-  "name": "filebutton",
+  "name": "file-button",
   "version": "1.0.0",
   "description": "A component to enable DOM element as file upload button",
   "main": "index.js",
