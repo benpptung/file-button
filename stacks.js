@@ -22,5 +22,11 @@ module.exports = [
     name: 'mocha',
     nature: 'js',
     files: 'node_modules/mocha/mocha.js'
+  },
+  {
+    name: 'example',
+    nature: 'js',
+    files: 'example/client/index.js',
+    commonjs: true
   }
 ];
